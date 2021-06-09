@@ -1,0 +1,312 @@
+.footer {
+  margin-top: auto;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      padding: 20px 0;
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+      padding: 10px 60px 0 0;
+    }
+    @include media-breakpoint-up(xl) {
+      display: block;
+      padding-right: 80px;
+    }
+
+    img {
+      height: 35px;
+    }
+  }
+
+  &__app {
+    order: -1;
+    padding: 20px 0;
+
+    @include media-breakpoint-up(lg) {
+      order: 3;
+      margin-left: auto;
+      min-width: 200px;
+      text-align: right;
+    }
+    @include media-breakpoint-up(xl) {
+      text-align: left;
+    }
+
+    > div {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 18px;
+      margin-bottom: 8px;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 16px;
+        margin-bottom: 14px;
+      }
+    }
+
+    & a {
+      display: inline-block;
+      transition: $transition-fade;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 4px;
+      }
+
+      img {
+        height: 45px;
+      }
+
+      &:hover,
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__nav {
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 560px;
+    }
+
+    nav {
+      border-top: 1px solid #f0eeee;
+      padding: 20px 0;
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        border: none;
+        width: auto;
+        padding: 20px 20px 20px 0;
+      }
+
+      & a {
+        font-size: 14px;
+        line-height: 18px;
+        color: #343434;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 16px;
+        }
+
+        &:hover,
+        &:active {
+          color: darken($primary, 15%);
+        }
+      }
+
+      .h6 {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 16px;
+          margin-bottom: 14px;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        column-count: 2;
+
+        @include media-breakpoint-up(md) {
+          column-count: 1;
+        }
+
+        li {
+          padding: 1px 0;
+
+          @include media-breakpoint-up(lg) {
+            padding: 3px 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #f0eeee;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 15px 0;
+  }
+
+  &__appbanner {
+    height: 180px;
+    color: #fff;
+    margin-top: 30px;
+    background-image: url('~assets/img/footer-appbanner-bg-sm.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+      height: 460px;
+      margin-top: 60px;
+      background-image: url('~assets/img/footer-appbanner-bg-lg.jpg');
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    &_title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      color: #fff;
+      width: 55%;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 40px;
+        line-height: 46px;
+        width: 420px;
+      }
+    }
+
+    &_links {
+      display: none;
+
+      @include media-breakpoint-up(lg) {
+        display: block;
+        position: absolute;
+        bottom: 40px;
+        left: 16px;
+
+        > div {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 16px;
+          margin-bottom: 10px;
+        }
+    
+        & a {
+          display: inline-block;
+          height: 55px;
+          transition: $transition-fade;
+    
+          img {
+            height: 100%;
+          }
+    
+          &:hover,
+          &:active {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+
+    &_images {
+      width: 45%;
+      height: calc(100% + 30px);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+
+      @include media-breakpoint-up(lg) {
+        width: 50%;
+        height: calc(100% + 60px);
+      }
+      @include media-breakpoint-up(xl) {
+        width: 60%;
+      }
+
+      div {
+        position: absolute;
+        background-repeat: no-repeat;
+
+        &:nth-child(1) {
+          width: 100px;
+          height: 200px;
+          top: 0;
+          left: 0;
+          z-index: 3;
+          background-image: url('~assets/img/footer-appbanner-phone-1.png');
+          background-position: center;
+          background-size: contain;
+        }
+        &:nth-child(3) {
+          width: 80px;
+          height: 150px;
+          top: 60px;
+          left: 42%;
+          z-index: 2;
+          background-image: url('~assets/img/footer-appbanner-phone-3.png');
+          background-position: top center;
+          background-size: cover;
+        }
+
+        @include media-breakpoint-up(lg) {
+          &:nth-child(1) {
+            width: 220px;
+            height: 450px;
+            top: 30px;
+          }
+          &:nth-child(2) {
+            width: 180px;
+            height: 320px;
+            bottom: 0;
+            left: 35%;
+            z-index: 1;
+            background-image: url('~assets/img/footer-appbanner-phone-2.png');
+            background-position: top center;
+            background-size: cover;
+          }
+          &:nth-child(3) {
+            width: 240px;
+            height: 480px;
+            top: 0;
+            left: 70%;
+            background-position: center;
+            background-size: contain;
+          }
+        }
+        @include media-breakpoint-up(xl) {
+          &:nth-child(1) {
+            width: 220px;
+            height: 450px;
+          }
+          &:nth-child(2) {
+            width: 180px;
+            height: 320px;
+            bottom: 0;
+            left: 35%;
+            z-index: 1;
+          }
+          &:nth-child(3) {
+            width: 240px;
+            height: 480px;
+            left: 55%;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}

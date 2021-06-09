@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #343434;
+  font-size: 16px;
+  line-height: 24px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  background: #f9f9f9;
+}
+
+#__nuxt {
+  height: 100%;
+}
+
+#__layout {
+  height: 100%;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+main {
+  padding: 30px 0;
+
+  @include media-breakpoint-up(md) {
+    padding: 80px 0;
+  }
+}

@@ -1,0 +1,121 @@
+.est_carousel {
+  width: 100%;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 30px;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .h3 {
+      margin: 0;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 18px;
+      white-space: nowrap;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 15px;
+
+      .h3 {
+        font-size: 28px;
+        line-height: 28px;
+      }
+
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__list {
+    min-width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    margin-left: -16px;
+    margin-right: -16px;
+    position: relative;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: -4px;
+      margin-right: -4px;
+    }
+
+    &_inner {
+      padding: 16px;
+      display: flex;
+      align-content: center;
+
+      @include media-breakpoint-up(sm) {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+    }
+  }
+
+  .card_est {
+    min-width: 340px;
+    max-width: 340px;
+    margin-left: 4px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &-seeall {
+      z-index: 2;
+      border-radius: 7px;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff !important;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      margin-left: -340px;
+      transition: $transition-base;
+
+      &:hover,
+      &:active {
+        background: rgba(0, 0, 0, 0.9);
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      min-width: 320px;
+      max-width: 320px;
+
+      &-seeall {
+        margin-left: -320px;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      min-width: 360px;
+      max-width: 360px;
+
+      &-seeall {
+        margin-left: -360px;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      min-width: 335px;
+      max-width: 335px;
+
+      &-seeall {
+        margin-left: -335px;
+      }
+    }
+  }
+}
