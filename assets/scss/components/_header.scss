@@ -151,5 +151,13 @@
         }
       }
     }
+
+    &_city {
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      pointer-events: none;
+      transform: translate(-50%, 0);
+    }
   }
 }

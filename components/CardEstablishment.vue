@@ -1,8 +1,6 @@
 <template>
   <div class="card_est">
-    <nuxt-link
-      :to="`/country/${filteredCard.countryId}/city/${filteredCard.cityId}`"
-    >
+    <nuxt-link :to="`/establishment/${filteredCard.id}`">
       <div class="card_est__top">
         <div class="card_est__img">
           <b-img :src="filteredCard.imgSrc" />
@@ -35,7 +33,7 @@ export default {
   components: {},
 
   props: {
-    card: {
+    dataCard: {
       type: Object,
       default: () => {},
     },
@@ -47,9 +45,8 @@ export default {
     ...mapGetters({}),
 
     filteredCard() {
-      const card = this.card
-      card.imgSrc = require(`~/assets/establishments/${card.img}`)
-
+      const card = this.dataCard
+      card.imgSrc = require(`~/assets/img/establishments/${card.img}`)
       return card
     },
   },

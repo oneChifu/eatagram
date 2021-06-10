@@ -3,7 +3,11 @@
   margin-bottom: 20px;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 80px;
   }
 
   &__head {
@@ -25,8 +29,6 @@
     }
 
     @include media-breakpoint-up(md) {
-      margin-bottom: 15px;
-
       .h3 {
         font-size: 28px;
         line-height: 28px;
@@ -35,6 +37,10 @@
       a {
         font-size: 16px;
       }
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 10px;
     }
   }
 
@@ -96,25 +102,27 @@
     @include media-breakpoint-up(md) {
       min-width: 320px;
       max-width: 320px;
+      margin-left: 8px;
 
       &-seeall {
         margin-left: -320px;
       }
     }
     @include media-breakpoint-up(lg) {
-      min-width: 360px;
-      max-width: 360px;
+      min-width: 340px;
+      max-width: 340px;
+      margin-left: 12px;
 
       &-seeall {
-        margin-left: -360px;
+        margin-left: -340px;
       }
     }
     @include media-breakpoint-up(xl) {
-      min-width: 335px;
-      max-width: 335px;
+      min-width: 322px;
+      max-width: 322px;
 
       &-seeall {
-        margin-left: -335px;
+        margin-left: -322px;
       }
     }
   }

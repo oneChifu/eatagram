@@ -44,6 +44,14 @@
 
             <b-spinner v-if="searchLoading" variant="primary" small></b-spinner>
           </div>
+
+          <b-button
+            v-if="cityId"
+            variant="dark"
+            class="header__search_city"
+            size="lg"
+            >{{ cities.find((e) => e.id === cityId).title }}</b-button
+          >
         </div>
       </div>
     </b-container>
@@ -54,6 +62,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { GET_CITIES } from '@/store-types/getters.type'
 
 export default {
   components: {},
@@ -68,7 +77,15 @@ export default {
   }),
 
   computed: {
-    ...mapGetters({}),
+    ...mapGetters({
+      cities: GET_CITIES,
+    }),
+
+    cityId() {
+      const path = this.$route.path.split('/')
+
+      return path[path.findIndex((e) => e === 'city') + 1] | null
+    },
 
     headerBgClass() {
       if (!this.headerBg) {
@@ -97,6 +114,8 @@ export default {
       }
     },
   },
+
+  created() {},
 
   methods: {
     search() {

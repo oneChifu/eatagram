@@ -14,14 +14,8 @@
 
 <script>
 export default {
-  name: 'HomePage',
+  name: 'CountryPage',
 
-  asyncData(ctx) {
-    // console.log('asyncData', ctx)
-  },
-
-  // created() {
-  //   this.$store.dispatch(HEADER_BG, true)
-  // },
+  asyncData(ctx) {},
 }
 </script>

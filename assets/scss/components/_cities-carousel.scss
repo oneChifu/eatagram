@@ -1,0 +1,74 @@
+.cities_carousel {
+  width: 100%;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 40px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 80px;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    a {
+      font-size: 14px;
+      line-height: 18px;
+      white-space: nowrap;
+    }
+
+    @include media-breakpoint-up(md) {
+      .h3 {
+        font-size: 28px;
+        line-height: 28px;
+      }
+
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__list {
+    min-width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    margin-left: -16px;
+    margin-right: -16px;
+    position: relative;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: -4px;
+      margin-right: -4px;
+    }
+
+    &_inner {
+      padding: 16px;
+      display: flex;
+      align-content: center;
+
+      @include media-breakpoint-up(sm) {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+    }
+  }
+
+  .card_city {
+    margin-left: 12px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-left: 30px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-left: 60px;
+    }
+  }
+}
